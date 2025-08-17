@@ -77,7 +77,7 @@ https://www.bestcssbuttongenerator.com/#/38
         <option value="SOMENTE COMUM">SOMENTE COMUM</option>
         <option value="SOMENTE INCOMUM">SOMENTE INCOMUM</option>
         <option value="SOMENTE RARO">SOMENTE RARO</option>
-    </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check3" name="concluida" value="3"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check3" name="concluida" value="3"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check23" name="concluida" value="23" />
       <br><br><span id="miss4">Missão 4</span>:
       <select id="missao4" name="missao4">
         <option value="-">-------</option>
@@ -97,7 +97,7 @@ https://www.bestcssbuttongenerator.com/#/38
         <option value="SOMENTE COMUM">SOMENTE COMUM</option>
         <option value="SOMENTE INCOMUM">SOMENTE INCOMUM</option>
         <option value="SOMENTE RARO">SOMENTE RARO</option>
-    </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check4" name="concluida" value="4" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check4" name="concluida" value="4" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check24" name="concluida" value="24" />
       <br><br><span id="miss5">Missão 5</span>:
       <select id="missao5" name="missao5">
         <option value="-">-------</option>
@@ -117,7 +117,7 @@ https://www.bestcssbuttongenerator.com/#/38
         <option value="SOMENTE COMUM">SOMENTE COMUM</option>
         <option value="SOMENTE INCOMUM">SOMENTE INCOMUM</option>
         <option value="SOMENTE RARO">SOMENTE RARO</option>
-    </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check5" name="concluida" value="5" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check5" name="concluida" value="5" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check25" name="concluida" value="25" />
       <br><br><span id="miss6">Missão 6</span>:
       <select id="missao6" name="missao6">
         <option value="-">-------</option>
@@ -137,7 +137,7 @@ https://www.bestcssbuttongenerator.com/#/38
         <option value="SOMENTE COMUM">SOMENTE COMUM</option>
         <option value="SOMENTE INCOMUM" selected>SOMENTE INCOMUM</option>
         <option value="SOMENTE RARO">SOMENTE RARO</option>
-    </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check6" name="concluida" value="6" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check6" name="concluida" value="6" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check26" name="concluida" value="26" />
       <br><br><span id="miss7">Missão 7</span>:
       <select id="missao7" name="missao7">
         <option value="-">-------</option>
@@ -157,7 +157,7 @@ https://www.bestcssbuttongenerator.com/#/38
         <option value="SOMENTE COMUM">SOMENTE COMUM</option>
         <option value="SOMENTE INCOMUM">SOMENTE INCOMUM</option>
         <option value="SOMENTE RARO" >SOMENTE RARO</option> 
-    </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     
 <!--    <input type="checkbox" id="dividir_epicos" name="dividir_epicos" /> Dividir épicos -->
 </form>
@@ -172,30 +172,50 @@ https://www.bestcssbuttongenerator.com/#/38
 carregar_missoes();
 
 function atualizar_valores() {
+    document.getElementById('check21').checked = false; // Set the radio button to checked myRadio.checked = true;
+    document.getElementById('check22').checked = false; // Set the radio button to checked myRadio.checked = true;
+    document.getElementById('check23').checked = false; // Set the radio button to checked myRadio.checked = true;
+    document.getElementById('check24').checked = false; // Set the radio button to checked myRadio.checked = true;
+    document.getElementById('check25').checked = false; // Set the radio button to checked myRadio.checked = true;
+
     const inputValue = document.getElementById("qtd_missao").value;
     document.getElementById("miss7").innerHTML = "Missão " + inputValue;
     document.getElementById("miss6").innerHTML = "Missão " + (inputValue-1);
     document.getElementById("miss5").innerHTML = "Missão " + (inputValue-2);
     if ((inputValue-3) <= 0){
         document.getElementById("miss4").innerHTML = "Sem missão";
+        if ((inputValue-3) == 0){
+            document.getElementById('check24').checked = true; // Set the radio button to checked myRadio.checked = true;
+        }
     } else {
         document.getElementById("miss4").innerHTML = "Missão " + (inputValue-3);
     }
     if ((inputValue-4) <= 0){
         document.getElementById("miss3").innerHTML = "Sem missão";
+        if ((inputValue-4) == 0){
+            document.getElementById('check23').checked = true; // Set the radio button to checked myRadio.checked = true;
+        }
     } else {
         document.getElementById("miss3").innerHTML = "Missão " + (inputValue-4);
     }
     if ((inputValue-5) <= 0){
         document.getElementById("miss2").innerHTML = "Sem missão";
+        if ((inputValue-5) == 0){
+            document.getElementById('check22').checked = true; // Set the radio button to checked myRadio.checked = true;
+        }
     } else {
         document.getElementById("miss2").innerHTML = "Missão " + (inputValue-5);
     }
     if ((inputValue-6) <= 0){
         document.getElementById("miss1").innerHTML = "Sem missão";
+        if ((inputValue-6) == 0){
+            document.getElementById('check21').checked = true; // Set the radio button to checked myRadio.checked = true;
+        }
     } else {
         document.getElementById("miss1").innerHTML = "Missão " + (inputValue-6);
     }
+
+
 }
 
 if(document.getElementById("gerar-btn") != null){
@@ -327,10 +347,18 @@ function enviar(){
 
 //    qtd_missao_desconsiderar = 0;
 
-    if(document.getElementById("check22").checked){
-        arrMissoesAtuais.splice(5,2); // .splice(posicao, quantidade)
-    } else if(document.getElementById("check21").checked){
+    if(document.getElementById("check21").checked){
         arrMissoesAtuais.splice(6,1); // .splice(posicao, quantidade)
+    } else if(document.getElementById("check22").checked){
+        arrMissoesAtuais.splice(5,2); // .splice(posicao, quantidade)
+    } else if(document.getElementById("check23").checked){
+        arrMissoesAtuais.splice(4,3); // .splice(posicao, quantidade)
+    } else if(document.getElementById("check24").checked){
+        arrMissoesAtuais.splice(3,4); // .splice(posicao, quantidade)
+    } else if(document.getElementById("check25").checked){
+        arrMissoesAtuais.splice(2,5); // .splice(posicao, quantidade)
+    } else if(document.getElementById("check26").checked){
+        arrMissoesAtuais.splice(1,6); // .splice(posicao, quantidade)
     }
 
 operadores_negrito = [];
@@ -376,7 +404,7 @@ if (posicao_check_missao_concluida > 0){
     for (j = arrMissoesAtuais.length-1; j >= 0; j--){
         console.log("--------");
         console.log(arrMissoesAtuais[j]);
-        num_missao = 7 - j;
+        num_missao = document.getElementById("qtd_missao").value - j;
 //        resultadoFinal +=  "<br>*" + num_missao + " - "+ arrMissoesAtuais[j] + "*<br>";
         resultadoFinal +=  "<br>*" + num_missao + " - "+ buscar_missao_traduzida(arrMissoesAtuais[j], arrTodasMissoes, arrTodasMissoesTraduzidas) + "*<br>"; 
         for (i = 0; i < listaFinal.length; i++){
