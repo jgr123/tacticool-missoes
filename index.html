@@ -6,12 +6,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body style="font-size: 40px; text-align:center;">
+    
 <h1>Missões de clã</h1>
+    Quantidade de missões: <input type="number" id="qtd_missao" name="tentacles" min="3" max="8" value="7" onchange="atualizar_valores()"/>
 <p style="font-size: 15px; text-align:center;">Primeira coluna de seleção é para marcar a última missão concluída e deixar em destaque os operadores desta missão.<br>
 Segunda coluna de seleção é para ignorar a missão no momento de criar a lista de operadores.<p>
   
+
+<!-- 
+https://www.bestcssbuttongenerator.com/#/38
+-->
+
 <form id="teste">
-    Missão 1:
+      <br><span id="miss1">Missão 1</span>:
       <select id="missao1" name="missao1">
         <option value="-">-------</option>
         <option value="BAIONETA">BAIONETA</option>
@@ -31,7 +38,7 @@ Segunda coluna de seleção é para ignorar a missão no momento de criar a list
         <option value="SOMENTE INCOMUM">SOMENTE INCOMUM</option>
         <option value="SOMENTE RARO" selected>SOMENTE RARO</option>
       </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check1" name="concluida" value="1" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check21" name="concluida" value="21" />
-      <br><br>Missão 2:
+      <br><br><span id="miss2">Missão 2</span>:
       <select id="missao2" name="missao2">
         <option value="-">-------</option>
         <option value="BAIONETA">BAIONETA</option>
@@ -51,7 +58,7 @@ Segunda coluna de seleção é para ignorar a missão no momento de criar a list
         <option value="SOMENTE INCOMUM" >SOMENTE INCOMUM</option>
         <option value="SOMENTE RARO">SOMENTE RARO</option>
     </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check2" name="concluida" value="2" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check22" name="concluida" value="22" />
-      <br><br>Missão 3:
+      <br><br><span id="miss3">Missão 3</span>:
       <select id="missao3" name="missao3">
         <option value="-">-------</option>
         <option value="BAIONETA">BAIONETA</option>
@@ -71,7 +78,7 @@ Segunda coluna de seleção é para ignorar a missão no momento de criar a list
         <option value="SOMENTE INCOMUM">SOMENTE INCOMUM</option>
         <option value="SOMENTE RARO">SOMENTE RARO</option>
     </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check3" name="concluida" value="3"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <br><br>Missão 4:
+      <br><br><span id="miss4">Missão 4</span>:
       <select id="missao4" name="missao4">
         <option value="-">-------</option>
         <option value="BAIONETA" selected>BAIONETA</option>
@@ -91,7 +98,7 @@ Segunda coluna de seleção é para ignorar a missão no momento de criar a list
         <option value="SOMENTE INCOMUM">SOMENTE INCOMUM</option>
         <option value="SOMENTE RARO">SOMENTE RARO</option>
     </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check4" name="concluida" value="4" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <br><br>Missão 5:
+      <br><br><span id="miss5">Missão 5</span>:
       <select id="missao5" name="missao5">
         <option value="-">-------</option>
         <option value="BAIONETA">BAIONETA</option>
@@ -111,7 +118,7 @@ Segunda coluna de seleção é para ignorar a missão no momento de criar a list
         <option value="SOMENTE INCOMUM">SOMENTE INCOMUM</option>
         <option value="SOMENTE RARO">SOMENTE RARO</option>
     </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check5" name="concluida" value="5" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <br><br>Missão 6:
+      <br><br><span id="miss6">Missão 6</span>:
       <select id="missao6" name="missao6">
         <option value="-">-------</option>
         <option value="BAIONETA" >BAIONETA</option>
@@ -131,7 +138,7 @@ Segunda coluna de seleção é para ignorar a missão no momento de criar a list
         <option value="SOMENTE INCOMUM" selected>SOMENTE INCOMUM</option>
         <option value="SOMENTE RARO">SOMENTE RARO</option>
     </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="check6" name="concluida" value="6" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <br><br>Missão 7:
+      <br><br><span id="miss7">Missão 7</span>:
       <select id="missao7" name="missao7">
         <option value="-">-------</option>
         <option value="BAIONETA">BAIONETA</option>
@@ -163,6 +170,33 @@ Segunda coluna de seleção é para ignorar a missão no momento de criar a list
 </html>
 <script>
 carregar_missoes();
+
+function atualizar_valores() {
+    const inputValue = document.getElementById("qtd_missao").value;
+    document.getElementById("miss7").innerHTML = "Missão " + inputValue;
+    document.getElementById("miss6").innerHTML = "Missão " + (inputValue-1);
+    document.getElementById("miss5").innerHTML = "Missão " + (inputValue-2);
+    if ((inputValue-3) <= 0){
+        document.getElementById("miss4").innerHTML = "Sem missão";
+    } else {
+        document.getElementById("miss4").innerHTML = "Missão " + (inputValue-3);
+    }
+    if ((inputValue-4) <= 0){
+        document.getElementById("miss3").innerHTML = "Sem missão";
+    } else {
+        document.getElementById("miss3").innerHTML = "Missão " + (inputValue-4);
+    }
+    if ((inputValue-5) <= 0){
+        document.getElementById("miss2").innerHTML = "Sem missão";
+    } else {
+        document.getElementById("miss2").innerHTML = "Missão " + (inputValue-5);
+    }
+    if ((inputValue-6) <= 0){
+        document.getElementById("miss1").innerHTML = "Sem missão";
+    } else {
+        document.getElementById("miss1").innerHTML = "Missão " + (inputValue-6);
+    }
+}
 
 if(document.getElementById("gerar-btn") != null){
     document.getElementById("gerar-btn").addEventListener("click", enviar);
