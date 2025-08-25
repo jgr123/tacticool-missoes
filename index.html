@@ -231,7 +231,7 @@ if(document.getElementById("copiar-btn") != null){
     arrTodasMissoes = ['BAIONETA', 'BASICA', 'BRECHA', 'B.S.S', 'COBERTURA', 'DEMONSTRAÇÃO', 'FACA', 'HABITANTES', 'HILDR', 'LIMPEZA', 'LOGISTICA', 'MARTELO', 'RECONHECIMENTO', 'SOMENTE COMUM', 'SOMENTE INCOMUM', 'SOMENTE RARO']
     arrTodasMissoesTraduzidas = ['BAIONETA/BAYONETA/BAYONET', 'M. BÁSICA/MISIÓN BÁSICA/BASIC MISSION', 'BRECHA/INFRACCIÓN/BREACH', 'B.S.S./B.S.S./B.S.S.', 'COBERTURA/COBERTURA/COVER', 'DEMONSTRAÇÃO/CONFRONTACIÓN/SHOWDOWN', 'FACA/CUCHILLO/KNIFE', 'HABITANTES/LUGAREÑOS/LOCALS', 'HILDR/HILDR/HILDR', 'LIMPEZA/LIMPIEZA/CLEANUP', 'LOGÍSTICA/LOGÍSTICA/LOGISTIC', 'MARTELO/MARTILLO/HAMMER', 'RECONHECIMENTO/RECONOCIMIENTO/RECON', 'SOMENTE COMUM', 'S. INCOMUM/SOLO POCO COMUNES/UNCOMMON ONLY', 'S. RARO/SOLO RAROS/RARE ONLY']
     
-    arrTodosOperadores = ['Rookie', 'Rick', 'Mishka', 'Lens', 'Boris', 'Klaus', 'Shi', 'Victor', 'Travis', 'Batya', 'Thor', 'Jason', 'Capisce', 'Joe', 'Syndrome', 'Valera', 'Varg', 'David', 'Spencer', 'McMean', 'Hawk', 'Owen', 'Diana', 'Miro', 'JB', 'Charon', 'Snek', 'Chen Li', 'Zloy', 'Dutch', 'Moses', 'Ray', 'Fênix', 'Dmitry', 'Apollo', 'Sussurro'];
+    arrTodosOperadores = ['Rookie', 'Rick', 'Mishka', 'Lens', 'Boris', 'Klaus', 'Shi', 'Victor', 'Travis', 'Batya', 'Thor', 'Jason', 'Capisce', 'Joe', 'Syndrome', 'Valera', 'Varg', 'David', 'Spencer', 'McMean', 'Hawk', 'Owen', 'Diana', 'Miro', 'JB', 'Charon', 'Snek', 'Chen Li', 'Zloy', 'Dutch', 'Moses', 'Ray', 'Fênix', 'Dmitry', 'Apollo', 'Whisper'];
     arrTodosOperadoresHTML = ['Rookie', 'Rick', 'Mishka', 'Lens', 
     '<span style="color: #3333FF">Boris</span>', '<span style="color: #3333FF">Klaus</span>', '<span style="color: #3333FF">Shi</span>', '<span style="color: #3333FF">Victor</span>', '<span style="color: #3333FF">Travis</span>', '<span style="color: #3333FF">Batya</span>', 
     '<span style="color: #9400D3">Thor</span>','<span style="color: #9400D3">Jason</span>', '<span style="color: #9400D3">Capisce</span>', '<span style="color: #9400D3">Joe</span>', '<span style="color: #9400D3">Syndrome</span>', '<span style="color: #9400D3">Valera</span>', '<span style="color: #9400D3">Varg</span>', '<span style="color: #9400D3">David</span>', '<span style="color: #9400D3">Spencer</span>', '<span style="color: #9400D3">McMean</span>', '<span style="color: #9400D3">Hawk</span>', '<span style="color: #9400D3">Owen</span>',
@@ -248,46 +248,46 @@ if(document.getElementById("copiar-btn") != null){
 '<span style="color: #DAA520">Fênix</span>',
 '<span style="color: #DAA520">Dmitry</span>',
 '<span style="color: #DAA520">Apollo</span>',
-'<span style="color: #DAA520">Sussurro</span>'
+'<span style="color: #DAA520">Whisper</span>'
     ];
 
     arrPontos = [];
-arrPontos.push([157, 215, 157, 157, 157, 157, 157, 157, 157, 157, 157, 157, 157, 0, 157, 157]); //Rookie
-arrPontos.push([157, 215, 157, 157, 286, 157, 268, 157, 157, 157, 157, 268, 157, 0, 157, 157]); //Rick
-arrPontos.push([157, 215, 157, 157, 157, 268, 157, 268, 157, 157, 157, 157, 157, 0, 157, 157]); //Mishka
-arrPontos.push([229, 172, 126, 215, 126, 236, 126, 126, 126, 229, 126, 126, 126, 0, 126, 126]); //Lens
-arrPontos.push([203, 270, 203, 199, 203, 199, 351, 199, 199, 203, 352, 351, 203, 0, 351, 199]); //Boris
-arrPontos.push([191, 365, 191, 186, 191, 186, 331, 186, 186, 191, 191, 331, 331, 0, 331, 186]); //Klaus
-arrPontos.push([191, 365, 191, 186, 191, 186, 331, 186, 186, 191, 331, 331, 191, 0, 331, 186]); //Shi
-arrPontos.push([191, 365, 331, 186, 191, 186, 186, 186, 186, 191, 331, 331, 191, 0, 331, 186]); //Victor
-arrPontos.push([325, 250, 188, 183, 325, 183, 183, 183, 183, 188, 188, 183, 325, 0, 325, 183]); //Travis
-arrPontos.push([188, 250, 188, 183, 188, 325, 183, 325, 183, 188, 188, 183, 188, 0, 325, 183]); //Batya
-arrPontos.push([350, 274, 197, 198, 197, 198, 198, 198, 358, 350, 197, 198, 197, 0, 198, 358]); //Thor
-arrPontos.push([337, 263, 189, 345, 189, 190, 190, 190, 345, 189, 337, 190, 189, 0, 190, 339]); //Jason
-arrPontos.push([184, 256, 184, 184, 184, 336, 184, 336, 184, 184, 184, 336, 184, 0, 184, 336]); //Capisce
-arrPontos.push([184, 256, 184, 184, 327, 184, 184, 336, 184, 327, 184, 184, 184, 0, 184, 336]); //Joe
-arrPontos.push([184, 256, 327, 184, 184, 184, 184, 336, 184, 184, 184, 336, 184, 0, 184, 336]); //Syndrome
-arrPontos.push([327, 256, 184, 184, 327, 336, 184, 184, 184, 184, 184, 184, 184, 0, 184, 336]); //Valera
-arrPontos.push([184, 256, 184, 184, 184, 184, 336, 184, 336, 184, 184, 184, 184, 0, 184, 336]); //Varg
-arrPontos.push([184, 256, 327, 336, 184, 184, 336, 184, 184, 184, 184, 184, 184, 0, 184, 336]); //David
-arrPontos.push([323, 252, 181, 330, 181, 182, 182, 182, 182, 181, 191, 182, 323, 0, 182, 330]); //Spencer
-arrPontos.push([162, 226, 162, 163, 162, 163, 296, 163, 163, 289, 162, 296, 162, 0, 163, 296]); //McMean
-arrPontos.push([164, 219, 164, 160, 285, 160, 160, 285, 160, 164, 164, 160, 285, 0, 285, 160]); //Hawk
-arrPontos.push([151, 210, 151, 151, 151, 151, 276, 151, 151, 151, 151, 151, 151, 0, 151, 276]); //Owen
-arrPontos.push([280, 382, 280, 490, 280, 280, 280, 280, 280, 496, 280, 280, 280, 0, 280, 280]); //Diana
-arrPontos.push([280, 382, 280, 280, 280, 280, 280, 490, 280, 496, 496, 280, 280, 0, 280, 280]); //Miro
-arrPontos.push([280, 382, 280, 280, 496, 280, 280, 280, 280, 496, 280, 280, 280, 0, 280, 280]); //JB
-arrPontos.push([274, 374, 274, 274, 277, 480, 480, 274, 274, 274, 274, 274, 486, 0, 274, 274]); //Charon
-arrPontos.push([265, 362, 265, 265, 265, 265, 265, 265, 265, 470, 265, 276, 470, 0, 265, 265]); //Snek
-arrPontos.push([454, 349, 256, 257, 256, 257, 257, 257, 257, 256, 454, 257, 256, 0, 257, 257]); //Chen Li
-arrPontos.push([250, 341, 443, 250, 250, 438, 250, 250, 250, 250, 250, 250, 250, 0, 250, 250]); //Zloy
-arrPontos.push([225, 307, 399, 225, 399, 225, 225, 225, 225, 225, 225, 225, 225, 0, 225, 225]); //Dutch
-arrPontos.push([225, 307, 399, 394, 225, 225, 225, 225, 225, 225, 225, 225, 225, 0, 225, 225]); //Moses
-arrPontos.push([212, 289, 212, 212, 376, 212, 212, 212, 212, 212, 212, 212, 376, 0, 212, 212]); //Ray
-arrPontos.push([209, 285, 209, 209, 370, 209, 209, 209, 209, 209, 370, 209, 209, 0, 209, 209]); //Fênix
-arrPontos.push([209, 285, 370, 209, 209, 209, 366, 209, 209, 209, 209, 209, 209, 0, 209, 209]); //Dmitry
-arrPontos.push([195, 266, 195, 195, 195, 195, 195, 195, 195, 195, 347, 195, 347, 0, 195, 195]); //Apollo
-arrPontos.push([133, 182, 133, 133, 133, 133, 133, 133, 233, 133, 133, 133, 236, 0, 133, 133]); //Sussurro
+arrPontos.push([157, 243, 157, 157, 157, 157, 157, 157, 157, 157, 157, 157, 157, 0, 157, 157]); //Rookie
+arrPontos.push([157, 243, 157, 157, 286, 157, 268, 157, 157, 157, 157, 268, 157, 0, 157, 157]); //Rick
+arrPontos.push([157, 243, 157, 157, 157, 268, 157, 268, 157, 157, 157, 157, 157, 0, 157, 157]); //Mishka
+arrPontos.push([229, 195, 126, 215, 126, 236, 126, 126, 126, 229, 126, 126, 126, 0, 126, 126]); //Lens
+arrPontos.push([203, 311, 203, 199, 203, 199, 351, 199, 199, 203, 352, 351, 203, 0, 351, 199]); //Boris
+arrPontos.push([191, 293, 191, 186, 191, 186, 331, 186, 186, 191, 191, 331, 331, 0, 331, 186]); //Klaus
+arrPontos.push([191, 293, 191, 186, 191, 186, 331, 186, 186, 191, 331, 331, 191, 0, 331, 186]); //Shi
+arrPontos.push([191, 293, 331, 186, 191, 186, 186, 186, 186, 191, 331, 331, 191, 0, 331, 186]); //Victor
+arrPontos.push([325, 288, 188, 183, 325, 183, 183, 183, 183, 188, 188, 183, 325, 0, 325, 183]); //Travis
+arrPontos.push([188, 288, 188, 183, 188, 325, 183, 325, 183, 188, 188, 183, 188, 0, 325, 183]); //Batya
+arrPontos.push([350, 306, 197, 198, 197, 198, 198, 198, 358, 350, 197, 198, 197, 0, 198, 358]); //Thor
+arrPontos.push([337, 294, 189, 345, 189, 190, 190, 190, 345, 189, 337, 190, 189, 0, 190, 339]); //Jason
+arrPontos.push([184, 286, 184, 184, 184, 336, 184, 336, 184, 184, 184, 336, 184, 0, 184, 336]); //Capisce
+arrPontos.push([184, 286, 184, 184, 327, 184, 184, 336, 184, 327, 184, 184, 184, 0, 184, 336]); //Joe
+arrPontos.push([184, 286, 327, 184, 184, 184, 184, 336, 184, 184, 184, 336, 184, 0, 184, 336]); //Syndrome
+arrPontos.push([327, 286, 184, 184, 327, 336, 184, 184, 184, 184, 184, 184, 184, 0, 184, 336]); //Valera
+arrPontos.push([184, 286, 184, 184, 184, 184, 336, 184, 336, 184, 184, 184, 184, 0, 184, 336]); //Varg
+arrPontos.push([184, 286, 327, 336, 184, 184, 336, 184, 184, 184, 184, 184, 184, 0, 184, 336]); //David
+arrPontos.push([323, 282, 181, 330, 181, 182, 182, 182, 182, 181, 191, 182, 323, 0, 182, 330]); //Spencer
+arrPontos.push([162, 253, 162, 163, 162, 163, 296, 163, 163, 289, 162, 296, 162, 0, 163, 296]); //McMean
+arrPontos.push([164, 252, 164, 160, 285, 160, 160, 285, 160, 164, 164, 160, 285, 0, 285, 160]); //Hawk
+arrPontos.push([151, 236, 151, 151, 151, 151, 276, 151, 151, 151, 151, 151, 151, 0, 151, 276]); //Owen
+arrPontos.push([280, 433, 280, 490, 280, 280, 280, 280, 280, 496, 280, 280, 280, 0, 280, 280]); //Diana
+arrPontos.push([280, 433, 280, 280, 280, 280, 280, 490, 280, 496, 496, 280, 280, 0, 280, 280]); //Miro
+arrPontos.push([280, 433, 280, 280, 496, 280, 280, 280, 280, 496, 280, 280, 280, 0, 280, 280]); //JB
+arrPontos.push([280, 433, 280, 280, 280, 480, 480, 280, 280, 280, 280, 280, 486, 0, 280, 280]); //Charon
+arrPontos.push([265, 410, 265, 265, 265, 265, 265, 265, 265, 470, 265, 276, 470, 0, 265, 265]); //Snek
+arrPontos.push([454, 396, 256, 257, 256, 257, 257, 257, 257, 256, 454, 257, 256, 0, 257, 257]); //Chen Li
+arrPontos.push([250, 386, 443, 250, 250, 438, 250, 250, 250, 250, 250, 250, 250, 0, 250, 250]); //Zloy
+arrPontos.push([225, 348, 399, 225, 399, 225, 225, 225, 225, 225, 225, 225, 225, 0, 225, 225]); //Dutch
+arrPontos.push([225, 348, 399, 394, 225, 225, 225, 225, 225, 225, 225, 225, 225, 0, 225, 225]); //Moses
+arrPontos.push([212, 328, 212, 212, 376, 212, 212, 212, 212, 212, 212, 212, 376, 0, 212, 212]); //Ray
+arrPontos.push([209, 323, 209, 209, 370, 209, 209, 209, 209, 209, 370, 209, 209, 0, 209, 209]); //Fênix
+arrPontos.push([209, 323, 370, 209, 209, 209, 366, 209, 209, 209, 209, 209, 209, 0, 209, 209]); //Dmitry
+arrPontos.push([195, 302, 195, 195, 195, 195, 195, 195, 195, 195, 347, 195, 347, 0, 195, 195]); //Apollo
+arrPontos.push([133, 206, 133, 133, 133, 133, 133, 133, 233, 133, 133, 133, 236, 0, 133, 133]); //Sussurro 
 //    arrThorAtual = [];
 
 posicao_check_missao_concluida = -1;
